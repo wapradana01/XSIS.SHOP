@@ -1,0 +1,23 @@
+﻿@model XSIS.Shop.ViewModels.OrderItemViewModels
+
+
+
+<div class="modal-header">
+    <h4 class="modal-title">Item</h4>
+</div>
+<div class="modal-body">
+    <div class="form-group">
+    @Html.LabelFor(model => model.ProductId, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.DropDownList("ProductId", null, "Pilih Produk", htmlAttributes: new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.ProductId, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-link">Add Item</button>
+    <button type="button" class="btn btn-link" data-dismiss="modal">
+        Close
+    </button>
+</div>

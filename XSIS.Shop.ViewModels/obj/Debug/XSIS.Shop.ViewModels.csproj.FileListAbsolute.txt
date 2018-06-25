@@ -1,0 +1,4 @@
+D:\KERJA\XSIS\Bootcamp\Week 4\WEB\XSIS.Shop.WebApps\XSIS.Shop.ViewModels\bin\Debug\XSIS.Shop.ViewModels.dll
+D:\KERJA\XSIS\Bootcamp\Week 4\WEB\XSIS.Shop.WebApps\XSIS.Shop.ViewModels\bin\Debug\XSIS.Shop.ViewModels.pdb
+D:\KERJA\XSIS\Bootcamp\Week 4\WEB\XSIS.Shop.WebApps\XSIS.Shop.ViewModels\obj\Debug\XSIS.Shop.ViewModels.dll
+D:\KERJA\XSIS\Bootcamp\Week 4\WEB\XSIS.Shop.WebApps\XSIS.Shop.ViewModels\obj\Debug\XSIS.Shop.ViewModels.pdb

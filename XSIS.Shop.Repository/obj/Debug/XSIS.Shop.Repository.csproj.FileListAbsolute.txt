@@ -1,0 +1,14 @@
+D:\KERJA\XSIS\Bootcamp\Week 4\WEB\XSIS.Shop.WebApps\XSIS.Shop.Repository\bin\Debug\XSIS.Shop.Repository.dll.config
+D:\KERJA\XSIS\Bootcamp\Week 4\WEB\XSIS.Shop.WebApps\XSIS.Shop.Repository\bin\Debug\XSIS.Shop.Repository.dll
+D:\KERJA\XSIS\Bootcamp\Week 4\WEB\XSIS.Shop.WebApps\XSIS.Shop.Repository\bin\Debug\XSIS.Shop.Repository.pdb
+D:\KERJA\XSIS\Bootcamp\Week 4\WEB\XSIS.Shop.WebApps\XSIS.Shop.Repository\bin\Debug\EntityFramework.dll
+D:\KERJA\XSIS\Bootcamp\Week 4\WEB\XSIS.Shop.WebApps\XSIS.Shop.Repository\bin\Debug\EntityFramework.SqlServer.dll
+D:\KERJA\XSIS\Bootcamp\Week 4\WEB\XSIS.Shop.WebApps\XSIS.Shop.Repository\bin\Debug\XSIS.Shop.Models.dll
+D:\KERJA\XSIS\Bootcamp\Week 4\WEB\XSIS.Shop.WebApps\XSIS.Shop.Repository\bin\Debug\XSIS.Shop.ViewModels.dll
+D:\KERJA\XSIS\Bootcamp\Week 4\WEB\XSIS.Shop.WebApps\XSIS.Shop.Repository\bin\Debug\XSIS.Shop.Models.pdb
+D:\KERJA\XSIS\Bootcamp\Week 4\WEB\XSIS.Shop.WebApps\XSIS.Shop.Repository\bin\Debug\XSIS.Shop.ViewModels.pdb
+D:\KERJA\XSIS\Bootcamp\Week 4\WEB\XSIS.Shop.WebApps\XSIS.Shop.Repository\bin\Debug\EntityFramework.xml
+D:\KERJA\XSIS\Bootcamp\Week 4\WEB\XSIS.Shop.WebApps\XSIS.Shop.Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\KERJA\XSIS\Bootcamp\Week 4\WEB\XSIS.Shop.WebApps\XSIS.Shop.Repository\obj\Debug\XSIS.Shop.Repository.csprojResolveAssemblyReference.cache
+D:\KERJA\XSIS\Bootcamp\Week 4\WEB\XSIS.Shop.WebApps\XSIS.Shop.Repository\obj\Debug\XSIS.Shop.Repository.dll
+D:\KERJA\XSIS\Bootcamp\Week 4\WEB\XSIS.Shop.WebApps\XSIS.Shop.Repository\obj\Debug\XSIS.Shop.Repository.pdb

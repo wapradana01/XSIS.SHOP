@@ -1,0 +1,127 @@
+﻿@model XSIS.Shop.Models.Order
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Order</h4>
+        <hr />
+        <div class="card">
+            <div class="card-hearder">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.OrderDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.OrderDate, new { htmlAttributes = new { @class = "form-control date-picker" } })
+                        @Html.ValidationMessageFor(model => model.OrderDate, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.OrderNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.OrderNumber, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.OrderNumber, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CustomerId, "Customer Name", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("CustomerId", null, "Pilih Nama", htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.CustomerId, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("detail", "Details Items", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <a data-toggle="modal" href="" class="btn btn-info waves-effect" onclick="modalOrderItem();">
+                            Add Item
+                        </a>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="fg-line">
+                        <div class="col-md-2"></div>
+                        <div class="col-lg-10">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Product Name
+                                    </th>
+                                    <th>
+                                        Unit Price
+                                    </th>
+                                    <th>
+                                        Order Quantity
+                                    </th>
+                                    <th>
+                                        Total Amount
+                                    </th>
+                                    <th>
+                                        Action
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbl-orderitem"></tbody>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TotalAmount, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.Editor("GrandTotal", new { htmlAttributes = new { @class = "form-control input-sm", @readonly = "readonly" } })
+                        @Html.ValidationMessageFor(model => model.TotalAmount, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <a href="/Orders/Index" class="btn btn-info waves-effect">Back To List</a>
+                        <button type="submit" class="btn btn-info waves-effect">Create</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<!-- Modal Default -->
+<div class="modal fade" id="modalDefault" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function modalOrderItem() {
+        $.ajax(
+        {
+            type: "get",
+            url: "/Orders/AddItem/",
+            success: function (result) {
+                $(".modal-content").html(result);
+                $("#modalDefault").modal("show");
+            },
+            error: function (result) {
+                alert("salah woi");
+            }
+        }
+        )
+    }
+</script>

@@ -1,0 +1,38 @@
+﻿<ul class="main-menu">
+    <li class="active">
+        <a href= @Url.Action("Index", "Home")><i class="zmdi zmdi-home"></i> Home</a>
+    </li>
+    <li class="sub-menu">
+        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-chart"></i>Customers</a>
+
+        <ul>
+            <li><a href= @Url.Action("Index", "Customers")>List Customers</a></li>
+            <li><a href=@Url.Action("Create", "Customers")>Create Customer</a></li>
+        </ul>
+    </li>
+    <li class="sub-menu">
+        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-view-compact"></i>Products</a>
+
+        <ul>
+            <li><a href=@Url.Action("Index", "Products")>List Products</a></li>
+            <li><a href=@Url.Action("Create", "Products")>Create Product</a></li>
+        </ul>
+    </li>
+    <li class="sub-menu">
+        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-widgets"></i> Suppliers</a>
+
+        <ul>
+            <li><a href=@Url.Action("Index", "Suppliers")>List Suppliers</a></li>
+            <li><a href=@Url.Action("Create", "Suppliers")>Create Supplier</a></li>
+        </ul>
+    </li>    
+    <li class="sub-menu">
+        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-widgets"></i> Orders</a>
+
+        <ul>
+            <li><a href=@Url.Action("Index", "Orders")>List Orders</a></li>
+            <li><a href=@Url.Action("Create", "Orders")>Create Order</a></li>
+        </ul>
+    </li>
+</ul>
+

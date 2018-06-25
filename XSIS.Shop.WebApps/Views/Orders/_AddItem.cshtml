@@ -1,0 +1,60 @@
+﻿@model XSIS.Shop.ViewModels.OrderItemViewModels
+
+
+
+<div class="modal-header">
+    <h4 class="modal-title">Item</h4>
+</div>
+<div class="form-horizontal">
+    <div class="modal-body">
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProductId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ProductId", null, "Pilih Produk", htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ProductId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Quantity, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Quantity, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Quantity, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" id="item_add" class="btn btn-link">Add Item</button>
+        <button type="button" class="btn btn-link" data-dismiss="modal">
+            Close
+        </button>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#item_add").click(function () {
+            var ProductId = $("#ProductId").val();
+            var OrderQuantity = $("#Quantity").val();
+
+            if (OrderQuantity > 0) {
+                $.ajax({
+                    type:"get",
+                    url: "@Url.Action("AddItemToCurrentOrder","Orders")",
+                    data: { "ProductId": ProductId, "OrderQuantity": OrderQuantity },
+                    dataType: 'html',
+                    success: function (data) {
+
+                        $("#modalDefault").modal('hide');
+                        $("#tbl-orderitem").html(data);
+                    }
+                })
+            }
+            else
+            {
+                alert("Order Quantity harus lebih dari 0");
+            }
+
+        })
+    });
+</script>
